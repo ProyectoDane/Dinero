@@ -1,0 +1,14 @@
+{
+  "name": "monedas-y-billetes",
+  "version": "2.2.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cordova": "^5.4.1"
+  },
+  "devDependencies": {
+    "phonegap": "^6.3.3"
+  },
+  "author": "FDV Solutions",
+  "license": "UNLICENSED"
+}
