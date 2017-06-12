@@ -328,7 +328,7 @@ var elemAnimador = {
             //drag: "",//Fired whenever the mouse is moved during the drag operation.
             start: function(event, ui) {
 
-
+                console.log("---- dentro del drag and drop ----" );
                 if($(this).hasClass("dropped")){
                     var $dropable = $(".full-"+$(this).attr("id"));
                     if($dropable.size() == 1){
