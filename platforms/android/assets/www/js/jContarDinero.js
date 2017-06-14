@@ -445,7 +445,7 @@ var r2 = {
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
 
-  		},0);//Espera dos segundo para empezar a hablar.
+  		},100);//Espera dos segundo para empezar a hablar.
 
 
 	},
@@ -469,7 +469,7 @@ var r2 = {
 						// 	nowPlaying = 0;
 						muyBien();
 						// };
-					},0);
+					},300);
 				}else{
 					elemAnimador.start(this,1200);
 
@@ -595,13 +595,13 @@ var r3 = {
 		},playTimeLast);
 
 		url = audios.contando_dinero.cuanto_dinero_tenes;
-	    contarDinero.soundsManager.playSound(url,true);
+
 		window.setTimeout(function(){
 			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 4000 /*por ahora*/ );
 			// Dialogo 0 - tamaño de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
-		//	contarDinero.soundsManager.playSound(url,true);
+			contarDinero.soundsManager.playSound(url,true);
 
 		},100);
 
@@ -771,14 +771,13 @@ var r4 = {
 		},playTimeLast);
 
 		url = audios.contando_dinero.cuanto_dinero_tenes;
-	    contarDinero.soundsManager.playSound(url,true);
 
 		window.setTimeout(function(){
 			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 4000 /*por ahora*/ );
 			// Dialogo 0 - tamaño de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
-		//	contarDinero.soundsManager.playSound(url,true);
+			contarDinero.soundsManager.playSound(url,true);
 		},100);//Espera dos segundo para empezar a hablar.
 
 	},
@@ -1623,14 +1622,8 @@ var contarDinero = {
 		this.setUpGamePages();
 
 		$(".btn-open-calculator").click({ context: this}, function(evt){
-			console.log("--- show Calculator ----");
 			evt.data.context.showCalculator();
 		});
-
-		$(".btn-open-calculator_2").click({ context: this}, function(evt){
-            console.log("--- show Calculator 2 ----");
-            evt.data.context.showCalculator();
-        });
 
 		$(".btn-close-calculator").click({ context: this}, function(evt){
 			evt.data.context.hideCalculator();

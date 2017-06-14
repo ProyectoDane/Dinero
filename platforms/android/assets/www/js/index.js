@@ -73,6 +73,7 @@ function menuKeyDown(event){
 var app = {
     loadApp : function(){
         //document.addEventListener("deviceready", onDeviceReady, false);
+
     },
 
     // Application Constructor
@@ -115,6 +116,35 @@ var app = {
             src = '/android_asset/www/' + url;
         }
 
+//SALVETTI: pedimos permisos aca
+
+        console.log("comenzando con los permisos");
+        var permissions = cordova.plugins.permissions;
+        var list = [
+          permissions.RECORD_AUDIO,
+          permissions.READ_PHONE_STATE
+        ];
+
+
+        function error() {
+          console.warn('son necesarios los permisos de RECORD_AUDIO y READ_PHONE_STATE');
+          navigator.app.exitApp();
+        }
+
+        function success( status ) {
+          if( !status.hasPermission ) {
+
+            permissions.requestPermissions(
+              list,
+              function(status) {
+                if( !status.hasPermission ) error();
+              },
+              error);
+          }
+        }
+        permissions.checkPermission(list, success, error);
+
+        // END SALVETTI y los permisos
         var bienvenida = new Media(src,
             // success callback
              function () {
@@ -310,7 +340,7 @@ var elemAnimador = {
             stack: selectorDraggables,
             snap: selectorSnapDrop,
 
-           /* revert: function(event, ui) {
+            revert: function(event, ui) {
 
                 var origTop = $(this).attr("data-origtop");
                 var origLeft = $(this).attr("data-origleft");
@@ -322,13 +352,12 @@ var elemAnimador = {
                 return event !== false ? false : true;
             },
             revertDuration: 1500,
-           SALVETTTI - Eliminacion del rever en Drag and Drop */
             //create: "",//Fired when the draggable element is first created by calling draggable().
             //stop: "",//Fired when the user lets go of the mouse button after dragging the element.
             //drag: "",//Fired whenever the mouse is moved during the drag operation.
             start: function(event, ui) {
 
-                console.log("---- dentro del drag and drop ----" );
+
                 if($(this).hasClass("dropped")){
                     var $dropable = $(".full-"+$(this).attr("id"));
                     if($dropable.size() == 1){
@@ -523,7 +552,6 @@ var mediosDePago = {
     bill20 : {"rutaImg":"../img/bill/20f-s.png", "valor":20, "frase": "EL BILLETE", "tipo":"billete", "esMoneda": "false" },
     bill50 : {"rutaImg":"../img/bill/50f-s.png", "valor":50, "frase": "EL BILLETE", "tipo":"billete", "esMoneda": "false" },
     bill100 : {"rutaImg":"../img/bill/100f-s.png", "valor":100, "frase": "EL BILLETE", "tipo":"billete", "esMoneda": "false" }
-  //  bill200 : {"rutaImg":"../img/bill/200f-s.png", "valor":200, "frase": "EL BILLETE", "tipo":"billete", "esMoneda": "false" }
 
 };
 
@@ -1251,14 +1279,13 @@ var audios = {
 
     },
     billetes: {
-        los_billetes: "audio/billetes/los_billetes_8.mp3",
+        los_billetes: "audio/billetes/los_billetes.mp3",
         billete_2pesos: "audio/billetes/billete_2pesos.mp3",
         billete_5pesos: "audio/billetes/billete_5pesos.mp3",
         billete_10pesos: "audio/billetes/billete_10pesos.mp3",
         billete_20pesos: "audio/billetes/billete_20pesos.mp3",
         billete_50pesos: "audio/billetes/billete_50pesos.mp3",
         billete_100pesos: "audio/billetes/billete_100pesos.mp3",
-        billete_200pesos: "audio/billetes/billete_200pesos.mp3",
         billete_500pesos: "audio/billetes/billete_500pesos.mp3",
 
         bill2: "audio/billetes/cual_es_el_billete_2pesos.mp3",

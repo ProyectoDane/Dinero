@@ -25,15 +25,14 @@
 		display: none;
 }
 
-.btn-open-calculator .btn-open-calculator_2 {
+.btn-open-calculator {
 	top: 5px;
 	left: 5px;
 	position: absolute;
 }
 
-/*  	SALVETTI - tamanio en duro width: 69%;*/
 .wrapper-calculator .calculator {
-	width: 330px;
+	width: 69%;
 	height: 100%;
 	box-sizing: border-box;
 	background-color: rgba(34, 170, 221, .9);
@@ -100,7 +99,7 @@
 .wrapper-calculator .history {
 	position: relative;
 	float: left;
-	width: 150px;
+	width: 31%;
 	height: 100%;
 	background-color: rgba(34, 170, 221, .9);
 	text-shadow: none !important;
@@ -156,7 +155,7 @@
 }
 
 /* Calculator button animation */
-.btn-open-calculator .btn-open-calculator_2{
+.btn-open-calculator{
 	animation: pulse ease-in-out 1s;
 	animation-iteration-count: infinite;
 	transform-origin: 50% 50%;

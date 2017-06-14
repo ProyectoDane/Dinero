@@ -165,7 +165,7 @@ var indexCE = {
 		self.suspenderClickHandlers = true;
 		window.setTimeout(function(){
   			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 100);
-  			//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+  			//Seteo el tamaño de la letra en función del contenedor. 
 			//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 			// Dialogo:
 			fillSpanWithCorrectFontSize( $("#index-compra-e .dialog-txt"), null, null, "black" );
@@ -178,9 +178,9 @@ var indexCE = {
   		},100);//Espera medio segundo para empezar a hablar.
 	},
 	
-	//Todos los bindings de eventos que se hacen una vez en la pï¿½gina.
+	//Todos los bindings de eventos que se hacen una vez en la página.
 	setUp: function(){
-	/*Acciï¿½n al tocar la vaca para empezar el juego
+	/*Acción al tocar la vaca para empezar el juego
 	  Hace la intro y muestra a la vaca entrando al kiosco*/			
 		$("#index-compra-e .kiosco").bind( "click", function() {
 			if( ! self.suspenderClickHandlers ){
@@ -194,8 +194,8 @@ var indexCE = {
 			}
 		});
 		
-	//TODO: Acï¿½, se deberï¿½a setear el atributo "estadoBotonesNav" de compraExacta segun los datos del usuario en uso de localStorage.
-	//Esto harï¿½ que tenga disponibles los botones de los niveles que ya pasï¿½.	
+	//TODO: Acá, se debería setear el atributo "estadoBotonesNav" de compraExacta segun los datos del usuario en uso de localStorage.
+	//Esto hará que tenga disponibles los botones de los niveles que ya pasó.	
 	}
 };
 
@@ -266,7 +266,7 @@ var b1 = {
 				    	}			    	
 				   ],
 					   
-	/*Lo necesario que se ejecute antes que la pï¿½gina se muestre*/
+	/*Lo necesario que se ejecute antes que la página se muestre*/
 	init: function(){
 		
 		var $productos = $("#b1-compra-e .producto img");
@@ -305,7 +305,7 @@ var b1 = {
 		
 	},
 	
-	/*Lo necesario que se ejecute cuando la pï¿½gina se muestre, el nivel empieza*/
+	/*Lo necesario que se ejecute cuando la página se muestre, el nivel empieza*/
 	start: function(){
 		
 		var dialog0 = document.getElementById("ce-b1-dialog-0");
@@ -314,7 +314,7 @@ var b1 = {
 		var animationElemPair = [vacaPos1, vacaPos2];
 		var speech;
 		
-		//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+		//Seteo el tamaño de la letra en función del contenedor. 
 		//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 		// Etiquetas:
 		fillSpanWithCorrectFontSize( $("#ce-b1-estante .precio"), null, null, "black" );		
@@ -324,7 +324,7 @@ var b1 = {
 		
 		//window.setTimeout(function(){
   			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 3000 /*por ahora*/ );
-  			// Dialogo - tamaï¿½o de fuente.
+  			// Dialogo - tamaño de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
   			
 
@@ -344,14 +344,14 @@ var b1 = {
 		
 	},
 	
-	//Todos los bindings de eventos que se hacen una vez en la pï¿½gina.
+	//Todos los bindings de eventos que se hacen una vez en la página.
 	setUp: function(){
 		//Set up imagenes de productos:
 		var $productos = $("#b1-compra-e .producto img");
 		$productos.bind( "click", function() {
 			if( ! self.suspenderClickHandlers ){
 				if( $(this).hasClass("correcto") ){
-					//Va a la pï¿½gina de nivel superado.
+					//Va a la página de nivel superado.
 					//window.setTimeout(function(){
 						$.mobile.navigate( "#ns-compra-e", { transition : "none" });
 
@@ -412,7 +412,7 @@ var b2 = {
 				    	}			    	
 				   ],
 					   
-	/*Lo necesario que se ejecute antes que la pï¿½gina se muestre*/
+	/*Lo necesario que se ejecute antes que la página se muestre*/
 	init: function(){
 		
 		var $billetes = $("#b2-compra-e .bill-opc img");
@@ -446,7 +446,7 @@ var b2 = {
 		$("#ce-b2-precio span")[0].textContent = "$" + varianteJuego["prod"].precio.toString();
 	},
 	
-	/*Lo necesario que se ejecute cuando la pï¿½gina se muestre, el nivel empieza*/
+	/*Lo necesario que se ejecute cuando la página se muestre, el nivel empieza*/
 	start: function(){
 		
 		var dialog0 = document.getElementById("ce-b2-dialog-0");
@@ -454,7 +454,7 @@ var b2 = {
 		var vacaPos2 = document.getElementById("ce-b2-vaca-img-2");
 		var animationElemPair = [vacaPos1, vacaPos2];
 		
-		//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+		//Seteo el tamaño de la letra en función del contenedor. 
 		//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 		// Etiquetas:
 		fillSpanWithCorrectFontSize( $("#ce-b2-precio"), null, null, "black" );
@@ -467,7 +467,7 @@ var b2 = {
 		self.suspenderClickHandlers = true;
 		
 		window.setTimeout(function(){
-  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 1000 /*por ahora*/ );
+  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 3000 /*por ahora*/ );
   			// Dialogo:
 			fillSpanWithCorrectFontSize( $("#b2-compra-e .dialog-txt"), null, null, "black" );
   			
@@ -488,14 +488,14 @@ var b2 = {
 		
 	},
 	
-	//Todos los bindings de eventos que se hacen una vez en la pï¿½gina.
+	//Todos los bindings de eventos que se hacen una vez en la página.
 	setUp: function(){
 		//Set up imagenes de billetes:
 		var $billetes = $("#b2-compra-e .bill-opc img");
 		$billetes.bind( "click", function() {
 			if( ! self.suspenderClickHandlers ){
 				if( $(this).hasClass("correcto") ){
-					//Va a la pï¿½gina de nivel superado.
+					//Va a la página de nivel superado.
 					window.setTimeout(function(){
 						$.mobile.navigate( "#ns-compra-e", { transition : "none" });
 
@@ -595,7 +595,7 @@ var b3 = {
 				    				    	
 				   ],
 					   
-	/*Lo necesario que se ejecute antes que la pï¿½gina se muestre*/
+	/*Lo necesario que se ejecute antes que la página se muestre*/
 	init: function(){
 		
 		var billete = document.getElementById("b3-bill");
@@ -628,7 +628,7 @@ var b3 = {
 		$("#ce-b3-precio span")[0].textContent = "$" + varianteJuego["prod"].precio.toString();
 	},
 	
-	/*Lo necesario que se ejecute cuando la pï¿½gina se muestre, el nivel empieza*/
+	/*Lo necesario que se ejecute cuando la página se muestre, el nivel empieza*/
 	start: function(){
 		
 		var dialog0 = document.getElementById("ce-b3-dialog-0");
@@ -636,7 +636,7 @@ var b3 = {
 		var vacaPos2 = document.getElementById("ce-b3-vaca-img-2");
 		var animationElemPair = [vacaPos1, vacaPos2];
 		
-		//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+		//Seteo el tamaño de la letra en función del contenedor. 
 		//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 		// Etiquetas:
 		fillSpanWithCorrectFontSize( $("#ce-b3-precio"), null, null, "black" );
@@ -649,7 +649,7 @@ var b3 = {
 		self.suspenderClickHandlers = true;
 		
 		window.setTimeout(function(){
-  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 1000 /*por ahora*/ );
+  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 3000 /*por ahora*/ );
   			// Dialogo:
 			fillSpanWithCorrectFontSize( $("#b3-compra-e .dialog-txt"), null, null, "black" );
 
@@ -669,14 +669,14 @@ var b3 = {
 		
 	},
 	
-	//Todos los bindings de eventos que se hacen una vez en la pï¿½gina.
+	//Todos los bindings de eventos que se hacen una vez en la página.
 	setUp: function(){
 		//Set up imagenes de billetes:
 		var $opcSiNo = $("#b3-compra-e .sino-opt img");
 		$opcSiNo.bind( "click", function() {
 			if( ! self.suspenderClickHandlers ){
 				if( $(this).hasClass("correcto") ){
-					//Va a la pï¿½gina de nivel superado.
+					//Va a la página de nivel superado.
 					window.setTimeout(function(){
 						$.mobile.navigate( "#ns-compra-e", { transition : "none" });
 
@@ -746,7 +746,7 @@ var b4 = {
 	
 	variantesPago: variantesDePago.monedas,
 					   
-	/*Lo necesario que se ejecute antes que la pï¿½gina se muestre*/
+	/*Lo necesario que se ejecute antes que la página se muestre*/
 	init: function(){
 		
 		var $productos = $("#b4-compra-e .producto img");
@@ -765,11 +765,11 @@ var b4 = {
 		$("#ce-b4-pagar").hide();
 		$("#ce-b4-listo").hide();
 		$("#b4-compra-e .btn").hide();
-		//Limpio el container de la bolsa y acomodo si quedï¿½ alguno elegido.
+		//Limpio el container de la bolsa y acomodo si quedó alguno elegido.
 		$("#ce-b4-compra-1").html("");
 		$("#b4-compra-e .full").removeClass("full");
 		$("#b4-compra-e .prod-bolsa").css("background-color","rgba(0,0,0,0)").css("border","dashed 3px rgba(0,0,0,0)");		
-		$("#b4-compra-e .piso" ).removeAttr("style");
+		$( "#b4-compra-e .piso" ).removeAttr("style"); 
 		
 		var random = randomIntFromInterval(0,b4.variantesProd.length-1);
 		var variantesProd = b4.variantesProd[random];
@@ -793,7 +793,7 @@ var b4 = {
 		
 	},
 	
-	/*Lo necesario que se ejecute cuando la pï¿½gina se muestre, el nivel empieza*/
+	/*Lo necesario que se ejecute cuando la página se muestre, el nivel empieza*/
 	start: function(){
 		var dialog0 = document.getElementById("ce-b4-dialog-0");
 		var dialog1 = document.getElementById("ce-b4-dialog-1");
@@ -805,57 +805,40 @@ var b4 = {
 		$("#b4-compra-e .precio").show();
 		$("#ce-b4-estante").show();
 		
-		//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+		//Seteo el tamaño de la letra en función del contenedor. 
 		//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 		// Etiquetas:
 		fillSpanWithCorrectFontSize( $("#ce-b4-estante .precio"), null, null, "black" );
 		
 		var playTimeLast;
-	//	self.suspenderClickHandlers = true;
+		self.suspenderClickHandlers = true;
 		
 		window.setTimeout(function(){
-  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 100 /*por ahora*/ );
-  			// Dialogo - tamanio de fuente.
+  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 3000 /*por ahora*/ );
+  			// Dialogo - tamaño de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
 			url = audios.con_vuelto.arrastra_a_la_bolsa_1_golosina;
 			compraExacta.soundsManager.playSound(url);
-
-  		//	window.setTimeout(function(){
+	        // src = "";	 
+	        // playAudio();
+  			
+  			window.setTimeout(function(){
   				//Activa los botones correspondientes.
-  		//		nivelSuperadoManager.initPanelNav(compraExacta.estadoBotonesNav["b4-compra-e"], "#b4-compra-e", "b4", 6);
-		//		self.suspenderClickHandlers = false;
-  	//		},playTimeLast);
-
-          // salvetti: ACA PASA ALGO CON ESTO DRAGGABLES....
-        //Limpio el container de la bolsa y acomodo si quedï¿½ alguno elegido.
-            $("#ce-b4-compra-1").html("");
-            $("#b4-compra-e .full").removeClass("full");
-            $("#b4-compra-e .prod-bolsa").css("background-color","rgba(0,0,0,0)").css("border","dashed 3px rgba(0,0,0,0)");
-            $("#b4-compra-e .piso" ).removeAttr("style");
-
-           elemAnimador.setUpDraggables("#ce-b4-prod-a", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-           elemAnimador.setUpDraggables("#ce-b4-prod-b", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-           elemAnimador.setUpDraggables("#ce-b4-prod-c", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-           elemAnimador.setUpDraggables("#ce-b4-prod-d", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-
-  		},10);
+  				nivelSuperadoManager.initPanelNav(compraExacta.estadoBotonesNav["b4-compra-e"], "#b4-compra-e", "b4", 6);
+				self.suspenderClickHandlers = false;				  			
+  			},playTimeLast);
+  			  			
+  		},100);
 		
 	},
 	
-	//Todos los bindings de eventos que se hacen una vez en la pï¿½gina.
+	//Todos los bindings de eventos que se hacen una vez en la página.
 	setUp: function(){
 		//Set up Drag and Drop
-	  // salvetti: ACA PASA ALGO CON ESTO DRAGGABLES....
+		elemAnimador.setUpDraggables("#b4-compra-e .piso", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
 		elemAnimador.setUpDropable("#ce-b4-compra-1", "#ce-b4-listo", 1, "#b4-compra-e");
-	    elemAnimador.setUpDraggables("#b4-compra-e .piso", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-
-
-           elemAnimador.setUpDraggables("#ce-b4-prod-a", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-           elemAnimador.setUpDraggables("#ce-b4-prod-b", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-           elemAnimador.setUpDraggables("#ce-b4-prod-c", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-           elemAnimador.setUpDraggables("#ce-b4-prod-d", "#ce-ddlc-b4", "#ce-b4-compra-1", "#ce-b4-listo");
-
+		
 		//Listo para pagar.
 		$("#ce-b4-listo").bind( "click", function() {
 			
@@ -874,7 +857,7 @@ var b4 = {
 			$.each($comprados.find(".precio"), function(key, value) {
 				b4.valorAPagar += parseInt($(value).data("precio"));
 			});
-			//Injecto las variantes de pago segï¿½n el valor a pagar
+			//Injecto las variantes de pago según el valor a pagar
 			//Cargo la imagen de los productos de la variante seleccionada.
 			var varianteDePago = b4.variantesPago[b4.valorAPagar.toString()];
 			var numOpc = 0;
@@ -891,15 +874,15 @@ var b4 = {
 			elemAnimador.setElemComprado($comprados, "ce-b4");
 			
 			//Reseteo los arrastrables y escondo el estante.
-			$("#b4-compra-e .piso" ).removeAttr("style");
+			$( "#b4-compra-e .piso" ).removeAttr("style"); 
 			$("#b4-compra-e .full").removeClass("full");			
 			$("#ce-b4-estante").hide();
-
-			//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor.
+			
+			//Seteo el tamaño de la letra en función del contenedor. 
 			//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 			// Valor Caja registradora:
 			fillSpanWithCorrectFontSize( $("#ce-b4-cr-txt"), null, null, "white" );
-			// Dialogo y tamaï¿½o de fuente.
+			// Dialogo y tamaño de fuente.
 			playTimeLast = dialogManager.startDialog( [dialog0],[dialog1], animationElemPair, "", 3000 );
   			fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );	
 
@@ -918,7 +901,7 @@ var b4 = {
 			var valorActualCaja = parseInt($valorCaja.html().replace("$", '').trim());	
 				
 			if( valorActualCaja != 0 && valorActualCaja == b4.valorAPagar ){
-				//Va a la pï¿½gina de nivel superado.
+				//Va a la página de nivel superado.
 				window.setTimeout(function(){
 					$.mobile.navigate( "#ns-compra-e", { transition : "none" });					
 					$(".prod-bolsa").css("background-color","rgba(0,0,0,0)").css("border","dashed 3px rgba(0,0,0,0)");	
@@ -940,7 +923,7 @@ var b4 = {
 				var animationElemPair = [vacaPos1, vacaPos2];
 				$("#b4-compra-e .mon-pago").removeClass("usado").show();
 				$valorCaja.html("$0");									
-				// Dialogo y tamaï¿½o de fuente.
+				// Dialogo y tamaño de fuente.
 				playTimeLast = dialogManager.startDialog( [dialog1],[dialog2], animationElemPair, "", 3000 );
 				fillSpanWithCorrectFontSize( $(dialog2).find(".dialog-txt"), null, null, "black" );
 
@@ -1031,7 +1014,7 @@ var b5 = {
 	
 	variantesPago: variantesDePago.billetes,
 					   
-	/*Lo necesario que se ejecute antes que la pï¿½gina se muestre*/
+	/*Lo necesario que se ejecute antes que la página se muestre*/
 	init: function(){
 		
 		var $productos = $("#b5-compra-e .producto img");
@@ -1050,7 +1033,7 @@ var b5 = {
 		$("#ce-b5-pagar").hide();
 		$("#ce-b5-listo").hide();
 		$("#b5-compra-e .btn").hide();
-		//Limpio el container de la bolsa y acomodo si quedï¿½ alguno elegido.
+		//Limpio el container de la bolsa y acomodo si quedó alguno elegido.
 		$("#ce-b5-compra-1").html("");
 		$("#ce-b5-compra-2").html("");
 		$("#b5-compra-e .full").removeClass("full");
@@ -1078,7 +1061,7 @@ var b5 = {
 		
 	},
 	
-	/*Lo necesario que se ejecute cuando la pï¿½gina se muestre, el nivel empieza*/
+	/*Lo necesario que se ejecute cuando la página se muestre, el nivel empieza*/
 	start: function(){
 		var dialog0 = document.getElementById("ce-b5-dialog-0");
 		var dialog1 = document.getElementById("ce-b5-dialog-1");
@@ -1090,7 +1073,7 @@ var b5 = {
 		$("#b5-compra-e .precio").show();
 		$("#ce-b5-estante").show();
 		
-		//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+		//Seteo el tamaño de la letra en función del contenedor. 
 		//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 		// Etiquetas:
 		fillSpanWithCorrectFontSize( $("#ce-b5-estante .precio"), null, null, "black" );
@@ -1100,7 +1083,7 @@ var b5 = {
 		
 		window.setTimeout(function(){
   			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 3000 /*por ahora*/ );
-  			// Dialogo - tamaï¿½o de fuente.
+  			// Dialogo - tamaño de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
 			// url = audios.precio_justo.consigna;
@@ -1120,7 +1103,7 @@ var b5 = {
 		
 	},
 	
-	//Todos los bindings de eventos que se hacen una vez en la pï¿½gina.
+	//Todos los bindings de eventos que se hacen una vez en la página.
 	setUp: function(){
 		//Set up Drag and Drop
 		elemAnimador.setUpDraggables("#b5-compra-e .piso", "#ce-ddlc-b5", "#ce-b5-compra-1", "#ce-b5-listo");
@@ -1144,7 +1127,7 @@ var b5 = {
 			$.each($comprados.find(".precio"), function(key, value) {
 				b5.valorAPagar += parseInt($(value).data("precio"));
 			});
-			//Injecto las variantes de pago segï¿½n el valor a pagar
+			//Injecto las variantes de pago según el valor a pagar
 			//Cargo la imagen de los productos de la variante seleccionada.
 			var varianteDePago = b5.variantesPago[b5.valorAPagar.toString()];
 			var numOpc = 0;
@@ -1165,11 +1148,11 @@ var b5 = {
 			$("#b5-compra-e .full").removeClass("full");			
 			$("#ce-b5-estante").hide();
 			
-			//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+			//Seteo el tamaño de la letra en función del contenedor. 
 			//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 			// Valor Caja registradora:
 			fillSpanWithCorrectFontSize( $("#ce-b5-cr-txt"), null, null, "white" );
-			// Dialogo y tamaï¿½o de fuente.
+			// Dialogo y tamaño de fuente.
 			playTimeLast = dialogManager.startDialog( [dialog0],[dialog1], animationElemPair, "", 3000 );
   			fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );
 
@@ -1189,7 +1172,7 @@ var b5 = {
 			var valorActualCaja = parseInt($valorCaja.html().replace("$", '').trim());	
 				
 			if( valorActualCaja != 0 && valorActualCaja == b5.valorAPagar ){
-				//Va a la pï¿½gina de nivel superado.
+				//Va a la página de nivel superado.
 				window.setTimeout(function(){
 					$.mobile.navigate( "#ns-compra-e", { transition : "none" });
 
@@ -1210,7 +1193,7 @@ var b5 = {
 				var animationElemPair = [vacaPos1, vacaPos2];
 				$("#b5-compra-e .bill-pago").removeClass("usado").show();
 				$valorCaja.html("$0");									
-				// Dialogo y tamaï¿½o de fuente.
+				// Dialogo y tamaño de fuente.
 				playTimeLast = dialogManager.startDialog( [dialog1],[dialog2], animationElemPair, "", 3000 );
 				fillSpanWithCorrectFontSize( $(dialog2).find(".dialog-txt"), null, null, "black" );
 		        
@@ -1306,7 +1289,7 @@ var b6 = {
 	
 	variantesPago: variantesDePago.combinado,
 					   
-	/*Lo necesario que se ejecute antes que la pï¿½gina se muestre*/
+	/*Lo necesario que se ejecute antes que la página se muestre*/
 	init: function(){
 		
 		var $productos = $("#b6-compra-e .producto img");
@@ -1325,7 +1308,7 @@ var b6 = {
 		$("#ce-b6-pagar").hide();
 		$("#ce-b6-listo").hide();
 		$("#b6-compra-e .btn").hide();
-		//Limpio el container de la bolsa y acomodo si quedï¿½ alguno elegido.
+		//Limpio el container de la bolsa y acomodo si quedó alguno elegido.
 		$("#ce-b6-compra-1").html("");
 		$("#ce-b6-compra-2").html("");
 		$("#b6-compra-e .full").removeClass("full");
@@ -1353,7 +1336,7 @@ var b6 = {
 		
 	},
 	
-	/*Lo necesario que se ejecute cuando la pï¿½gina se muestre, el nivel empieza*/
+	/*Lo necesario que se ejecute cuando la página se muestre, el nivel empieza*/
 	start: function(){
 		var dialog0 = document.getElementById("ce-b6-dialog-0");
 		var dialog1 = document.getElementById("ce-b6-dialog-1");
@@ -1365,7 +1348,7 @@ var b6 = {
 		$("#b6-compra-e .precio").show();
 		$("#ce-b6-estante").show();
 		
-		//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+		//Seteo el tamaño de la letra en función del contenedor. 
 		//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 		// Etiquetas:
 		fillSpanWithCorrectFontSize( $("#ce-b6-estante .precio"), null, null, "black" );
@@ -1375,7 +1358,7 @@ var b6 = {
 		
 		window.setTimeout(function(){
   			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 3000 /*por ahora*/ );
-  			// Dialogo - tamaï¿½o de fuente.
+  			// Dialogo - tamaño de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
 			url = audios.con_vuelto.arrastra_dos_golosinas;
@@ -1394,7 +1377,7 @@ var b6 = {
 		
 	},
 	
-	//Todos los bindings de eventos que se hacen una vez en la pï¿½gina.
+	//Todos los bindings de eventos que se hacen una vez en la página.
 	setUp: function(){
 		//Set up Drag and Drop
 		elemAnimador.setUpDraggables("#b6-compra-e .piso", "#ce-ddlc-b6", "#ce-b6-compra-1", "#ce-b6-listo");
@@ -1419,7 +1402,7 @@ var b6 = {
 			$.each($comprados.find(".precio"), function(key, value) {
 				b6.valorAPagar += parseInt($(value).data("precio"));
 			});
-			//Injecto las variantes de pago segï¿½n el valor a pagar
+			//Injecto las variantes de pago según el valor a pagar
 			//Cargo la imagen de los productos de la variante seleccionada.
 			var varianteDePago = b6.variantesPago[b6.valorAPagar.toString()];
 			var numOpc = 0;
@@ -1445,15 +1428,15 @@ var b6 = {
 			elemAnimador.setElemComprado($comprados, "ce-b6");
 			
 			//Reseteo los arrastrables y escondo el estante.
-			$("#b6-compra-e .piso" ).removeAttr("style");
+			$( "#b6-compra-e .piso" ).removeAttr("style"); 
 			$("#b6-compra-e .full").removeClass("full");			
 			$("#ce-b6-estante").hide();
 			
-			//Seteo el tamaï¿½o de la letra en funciï¿½n del contenedor. 
+			//Seteo el tamaño de la letra en función del contenedor. 
 			//Se hace en pageshow ya que los contenedores tienen que ser visibles - tener ancho y alto. 
 			// Valor Caja registradora:
 			fillSpanWithCorrectFontSize( $("#ce-b6-cr-txt"), null, null, "white" );
-			// Dialogo y tamaï¿½o de fuente.
+			// Dialogo y tamaño de fuente.
 			playTimeLast = dialogManager.startDialog( [dialog0],[dialog1], animationElemPair, "", 3000 );
   			fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );	
 
@@ -1472,7 +1455,7 @@ var b6 = {
 			var valorActualCaja = parseInt($valorCaja.html().replace("$", '').trim());	
 				
 			if( valorActualCaja != 0 && valorActualCaja == b6.valorAPagar ){
-				//Va a la pï¿½gina de nivel superado.
+				//Va a la página de nivel superado.
 				window.setTimeout(function(){
 					$.mobile.navigate( "#ns-compra-e", { transition : "none" });
 
@@ -1493,7 +1476,7 @@ var b6 = {
 				var animationElemPair = [vacaPos1, vacaPos2];
 				$("#b6-compra-e .pago-comb").removeClass("usado").show();
 				$valorCaja.html("$0");									
-				// Dialogo y tamaï¿½o de fuente.
+				// Dialogo y tamaño de fuente.
 				playTimeLast = dialogManager.startDialog( [dialog1],[dialog2], animationElemPair, "", 3000 );
 				fillSpanWithCorrectFontSize( $(dialog2).find(".dialog-txt"), null, null, "black" );
 
@@ -1511,24 +1494,24 @@ var b6 = {
 
 var nivelSuperadoCE = {
 	
-	/*Lo necesario que se ejecute antes que la pï¿½gina se muestre*/
+	/*Lo necesario que se ejecute antes que la página se muestre*/
 	init: function( idPaginaJuegoPrevio ){
-		console.log("Juego Previo: " +  idPaginaJuegoPrevio);
+		
 		$("#ns-sig-ce").css("background-color","rgba(0,0,0,0)");	
 		nivelSuperadoManager.setUpAtInit(idPaginaJuegoPrevio, $("#ns-back-ce"), $("#ns-sig-ce"), compraExacta );
 		
 	},
 	
-	/*Lo necesario que se ejecute cuando la pï¿½gina se muestre, el nivel empieza*/
+	/*Lo necesario que se ejecute cuando la página se muestre, el nivel empieza*/
 	start: function(){
-		//Por ahora nada, a lo sumo, despuï¿½s la vaca se moverï¿½ y habrï¿½ algun audio.
-		console.log("---- dentro del START de cada juego ----" );
+		
+		//Por ahora nada, a lo sumo, después la vaca se moverá y habrá algun audio.
+		
 	},
 	
-	//Todos los bindings de eventos que se hacen una vez en la pï¿½gina.
+	//Todos los bindings de eventos que se hacen una vez en la página.
 	setUp: function(){		
-		//Por ahora, no realizara nada acï¿½.
-		console.log("---- dentro del setup de la pagina ----" );
+		//Por ahora, no realizara nada acá.
 	}
 };
 
@@ -1562,7 +1545,7 @@ var compraExacta = {
 	},
 	
 	setUpGamePages: function(){
-		/*Setea los bindings para inicializar el estado al mostrar cada pï¿½gina.*/
+		/*Setea los bindings para inicializar el estado al mostrar cada página.*/
 		$(document).on("pagecontainerbeforeshow", function(event, ui) {
 			var idPage = ui.toPage[0].id;
 			var levelToShowObject = compraExacta.pageLevels[idPage];
@@ -1571,14 +1554,14 @@ var compraExacta = {
 				if(idPage !== "ns-compra-e" ){
 					levelToShowObject.init();
 				}else if(  typeof ui.prevPage[0] == "undefined" ){
-					//En el caso que no le llegue la pï¿½gina previa (ej. actualizar?), va al inicio del juego.
+					//En el caso que no le llegue la página previa (ej. actualizar?), va al inicio del juego.
 					levelToShowObject.init("index-compra-e");					
 				}else{
 					levelToShowObject.init(ui.prevPage[0].id);
 				}
 			}			
 		});
-		/*Setea los bindings para inicializar el estado al mostrar cada pï¿½gina.*/
+		/*Setea los bindings para inicializar el estado al mostrar cada página.*/
 		$(document).on("pagecontainershow", function(event, ui) {
 			var idPage = ui.toPage[0].id;
 			var levelToShowObject = compraExacta.pageLevels[idPage];
@@ -1587,10 +1570,9 @@ var compraExacta = {
 				levelToShowObject.start();
 			}			
 		});		
-		/*Set Up de todas las pï¿½ginas*/
+		/*Set Up de todas las páginas*/
 		$.each(compraExacta.pageLevels, function(key, value){
-			if(value){
-				console.log("---- dentro del setup :" + value + "----" );
+			if(value){				
 				value.setUp();
 			};
 		});

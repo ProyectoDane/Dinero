@@ -159,13 +159,21 @@ module.exports = [
         "clobbers": [
             "window.Media"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+        "id": "cordova-plugin-android-permissions.Permissions",
+        "clobbers": [
+            "cordova.plugins.permissions"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "cordova-plugin-file": "3.0.0",
-    "cordova-plugin-media": "1.0.1"
+    "cordova-plugin-media": "1.0.1",
+    "cordova-plugin-android-permissions": "1.0.0"
 };
 // BOTTOM OF METADATA
 });
