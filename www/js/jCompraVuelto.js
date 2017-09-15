@@ -1471,6 +1471,7 @@ var compraVuelto = {
 	initialize: function(){
 		this.soundsManager = new SoundsManager();
 		this.setUpGamePages();
+		audio.initialize(this.soundsManager);
 	},
 	
 	setUpGamePages: function(){

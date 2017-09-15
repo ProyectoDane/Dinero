@@ -1,18 +1,18 @@
 {
   "android": {
     "debug": {
-      "keystore": "",
-      "storePassword": "",
-      "alias": "",
-      "password" : "",
-      "keystoreType": ""
-    },
-    "release": {
       "keystore": "./monedasybilletes.keystore",
       "storePassword": "12345678",
       "alias": "monedasybilletes",
       "password" : "12345678",
       "keystoreType": ""
+    },
+    "release": {
+      "keystore": "./ProyectoDane645312.jks",
+      "storePassword": "645312",
+      "alias": "proyectodane",
+      "password" : "645312",
+      "keystoreType": "jks"
     }
   }
 }

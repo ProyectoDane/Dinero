@@ -1622,6 +1622,8 @@ var contarDinero = {
 
 		this.setUpGamePages();
 
+		audio.initialize(this.soundsManager);
+
 		$(".btn-open-calculator").click({ context: this}, function(evt){
 			console.log("--- show Calculator ----");
 			evt.data.context.showCalculator();

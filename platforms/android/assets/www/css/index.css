@@ -97,6 +97,28 @@ body {
 	left: 3%;
 	right: 92%;
 }
+.v-btn-off{
+	background : url(../img/btn/v-btn-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.v-btn-on{
+	background : url(../img/btn/v-btn-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.v-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	right: 3%;
+	left: 86%;
+}
+.v-btn-pos-home{
+	top: 91%;
+	bottom: 1%;
+	right: 3%;
+	left: 82%;
+}
 .b-btn-on{
 	background : url(../img/btn/b-btn-on.png);
 	background-size: 100% 100%;

@@ -25,6 +25,10 @@
                         {
                             "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppPreferences\"><param name=\"android-package\" value=\"me.apla.cordova.AppPreferences\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -48,6 +52,12 @@
                             "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
                             "count": 1
                         }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:name=\"me.apla.cordova.AppPreferencesActivity\" />",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -58,6 +68,9 @@
             "PACKAGE_NAME": "com.monedasybilletes"
         },
         "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.monedasybilletes"
+        },
+        "cordova-plugin-app-preferences": {
             "PACKAGE_NAME": "com.monedasybilletes"
         }
     },
@@ -222,10 +235,19 @@
             "clobbers": [
                 "window.Media"
             ]
+        },
+        {
+            "id": "cordova-plugin-app-preferences.apppreferences",
+            "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+            "pluginId": "cordova-plugin-app-preferences",
+            "clobbers": [
+                "plugins.appPreferences"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-file": "3.0.0",
-        "cordova-plugin-media": "1.0.1"
+        "cordova-plugin-media": "1.0.1",
+        "cordova-plugin-app-preferences": "0.99.3"
     }
 }

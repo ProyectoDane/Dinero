@@ -23,7 +23,7 @@
         <script type="text/javascript" src="../js/index.js"></script>
 
 		<script type="text/javascript" src="../js/Calculator.js"></script>
-
+		<script type="text/javascript" src="../js/audioManager.js"></script>
 		<script type="text/javascript" src="../js/jContarDinero.js"></script>
 		<script type="text/javascript" src="../js/SoundsManager.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
@@ -82,6 +82,7 @@
     				<div id="5-r1-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r1" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r1-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-ce-r1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -139,6 +140,7 @@
     				<div id="5-r2-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r2" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r2-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cds-r2" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -206,6 +208,7 @@
     				<div id="5-r3-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r3" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r3-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cds-r3" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -274,6 +277,7 @@
     				<div id="5-r4-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r4" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r4-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cds-r4" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -345,6 +349,7 @@
     				<div id="5-r5-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r5" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r5-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cds-r5" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -410,6 +415,7 @@
     				<div id="5-r6-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r6" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r6-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cds-r56" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -503,11 +509,9 @@
 
        	<!-- <script type="text/javascript" src="../cordova.js"></script> -->
         <script type="text/javascript">
-
-        document.addEventListener("deviceready", function () {
-			contarDinero.initialize();
-		}, false);
-
+	        document.addEventListener("deviceready", function () {
+				contarDinero.initialize();
+			}, false);
         </script>
     </body>
 </html>

@@ -23,7 +23,7 @@
         <script type="text/javascript" src="../js/index.js"></script>
 
 		<script type="text/javascript" src="../js/Calculator.js"></script>
-
+		<script type="text/javascript" src="../js/audioManager.js"></script>
 		<script type="text/javascript" src="../js/jContarDinero.js"></script>
 		<script type="text/javascript" src="../js/SoundsManager.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
@@ -82,6 +82,7 @@
     				<div id="5-r1-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r1" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r1-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-ce-r1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -92,10 +93,11 @@
 		<div id="r2-contar-dinero" data-role="page" >
 			<div data-role="content" class="fullscreen">
     			<div class="page-background cds-bg-container" >
-<!--
-	    			<img id="cds-r2-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
-	    			<img id="cds-r2-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
-	    			 -->
+					<img class="btn-open-calculator" src="../img/btn/m-btn-abrir-calculadora.png" width="30" height="30">
+					<!--
+                                        <img id="cds-r2-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+                                        <img id="cds-r2-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+                                         -->
 					<img class="nivel-actual" src="../img/btn/2-on.png" />
 					<div id="cds-r2-dialog-0" class="dialog dialog-small-up cds-dialog">
 						<div id="cds-r2-dialog-0-txt" class="dialog-txt">
@@ -138,7 +140,8 @@
     				<div id="5-r2-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r2" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r2-off" class="btn six-btn-off six-btn-pos off"></div>
-    				<a id="hm-btn-cds-r1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
+    				<a id="hm-btn-cds-r2" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
     	</div>
@@ -147,18 +150,16 @@
 		<!--Nivel 3 billetes < 10: Inicio -->
 		<div id="r3-contar-dinero" data-role="page" >
 			<div data-role="content" class="fullscreen">
-    			<div class="page-background cds-bg-container" >
-<!--
-	    			<img id="cds-r3-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
-	    			<img id="cds-r3-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
-	    			 -->
+				<div class="page-background cds-bg-container" >
+					<img class="btn-open-calculator" src="../img/btn/m-btn-abrir-calculadora.png" width="30" height="30">
+
 					<img class="nivel-actual" src="../img/btn/3-on.png" />
 					<div id="cds-r3-dialog-0" class="dialog dialog-small-up cds-dialog">
                         <div id="cds-r3-dialog-0-txt" class="dialog-txt">
                         	<span>&iquest;CUANTO SUMAN ESTOS 2 BILLETES? SELECCION&Aacute; EL BOT&Oacute;N CON EL VALOR CORRECTO</span>
                     	</div>
                     </div>
-					<div class="cds-b-banner">
+						<div class="cds-b-banner">
 						<div id="r3_pos1" class="bill-banner bill_1_2_billetes_centrados" >
 							<img id="r3_pos1_img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="fp-h fp-w" />
 						</div>
@@ -171,25 +172,26 @@
 						<div class="opciones opcion_1">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_1"></span>
+									<span id="opcion_1_r3"></span>
 								</div>
 							</div>
 						</div>
 						<div class="opciones opcion_2">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_2"></span>
+									<span id="opcion_2_r3"></span>
 								</div>
 							</div>
 						</div>
 						<div class="opciones opcion_3">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_3"></span>
+									<span id="opcion_3_r3"></span>
 								</div>
 							</div>
 						</div>
 					</div>
+
 					<a id="b-r3" class="btn b-btn-on b-btn-pos" href="#r2-contar-dinero"></a>
     				<a id="s-r3" class="btn s-btn-on s-btn-pos" href="#r4-contar-dinero"></a>
     				<div id="s-r3-off" class="btn s-btn-off s-btn-pos off"></div>
@@ -206,7 +208,8 @@
     				<div id="5-r3-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r3" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r3-off" class="btn six-btn-off six-btn-pos off"></div>
-    				<a id="hm-btn-cds-r1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
+    				<a id="hm-btn-cds-r3" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
     	</div>
@@ -215,11 +218,12 @@
 		<!--Nivel 4 contar momendas < 10: Inicio -->
 		<div id="r4-contar-dinero" data-role="page" >
 			<div data-role="content" class="fullscreen">
-    			<div class="page-background cds-bg-container" >
-<!--
-	    			<img id="cds-r4-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
-	    			<img id="cds-r4-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
-	    			 -->
+				<div class="page-background cds-bg-container" >
+					<img class="btn-open-calculator" src="../img/btn/m-btn-abrir-calculadora.png" width="30" height="30">
+					<!--
+                                        <img id="cds-r4-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+                                        <img id="cds-r4-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+                                         -->
 					<img class="nivel-actual" src="../img/btn/4-on.png" />
 					<div id="cds-r4-dialog-0" class="dialog dialog-small-up cds-dialog">
 						<div id="cds-r4-dialog-0-txt" class="dialog-txt">
@@ -238,21 +242,21 @@
 						<div class="opciones opcion_1">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_1"></span>
+									<span id="opcion_1_r4"></span>
 								</div>
 							</div>
 						</div>
 						<div class="opciones opcion_2">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_2"></span>
+									<span id="opcion_2_r4"></span>
 								</div>
 							</div>
 						</div>
 						<div class="opciones opcion_3">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_3"></span>
+									<span id="opcion_3_r4"></span>
 								</div>
 							</div>
 						</div>
@@ -273,6 +277,7 @@
     				<div id="5-r4-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r4" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r4-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cds-r4" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -283,6 +288,7 @@
 		<div id="r5-contar-dinero" data-role="page" >
 			<div data-role="content" class="fullscreen">
     			<div class="page-background cds-bg-container" >
+					<img class="btn-open-calculator" src="../img/btn/m-btn-abrir-calculadora.png" width="30" height="30">
 <!--
 	    			<img id="cds-r5-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
 	    			<img id="cds-r5-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
@@ -301,28 +307,28 @@
 							<img id="r5_pos2_img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="fp-h fp-w"/>
 						</div>
 						<div id="r5_pos3" class="mon_bill_centradas_vert" >
-							<img id="r5_pos2_img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="fp-h fp-w"/>
+							<img id="r5_pos3_img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="fp-h fp-w"/>
 						</div>
 					</div>
 					<div class="cds-b-banner-botones">
 						<div class="opciones opcion_1">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_1"></span>
+									<span id="opcion_1_r5"></span>
 								</div>
 							</div>
 						</div>
 						<div class="opciones opcion_2">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_2"></span>
+									<span id="opcion_2_r5"></span>
 								</div>
 							</div>
 						</div>
 						<div class="opciones opcion_3">
 							<div class="fp-h fp-w opcion_bg">
 								<div class="vuelto-txt">
-									<span id="opcion_3"></span>
+									<span id="opcion_3_r5"></span>
 								</div>
 							</div>
 						</div>
@@ -343,6 +349,7 @@
     				<div id="5-r5-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r5" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r5-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cds-r5" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -353,6 +360,7 @@
 		<div id="r6-contar-dinero" data-role="page" >
 			<div data-role="content" class="fullscreen">
     			<div class="page-background cds-bg-container" >
+					<img class="btn-open-calculator" src="../img/btn/m-btn-abrir-calculadora.png" width="30" height="30">
 					<img class="nivel-actual" src="../img/btn/6-on.png" />
 					<div id="cds-r6-dialog-0" class="dialog dialog-small-up cds-dialog">
 						<div id="cds-r6-dialog-0-txt" class="dialog-txt">
@@ -367,7 +375,7 @@
 							<img id="r6_pos2_img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="fp-h fp-w"/>
 						</div>
 						<div id="r6_pos3" class="mon_bill_centradas_vert" >
-							<img id="r6_pos2_img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="fp-h fp-w"/>
+							<img id="r6_pos3_img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="fp-h fp-w"/>
 						</div>
 					</div>
 					<div class="cds-b-banner-botones">
@@ -407,6 +415,7 @@
     				<div id="5-r6-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-r6" class="btn six-btn-on six-btn-pos" href="#r6-contar-dinero"></a>
     				<div id="6-r6-off" class="btn six-btn-off six-btn-pos off"></div>
+    				<a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cds-r56" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>
@@ -500,11 +509,9 @@
 
        	<!-- <script type="text/javascript" src="../cordova.js"></script> -->
         <script type="text/javascript">
-
-        document.addEventListener("deviceready", function () {
-			contarDinero.initialize();
-		}, false);
-
+	        document.addEventListener("deviceready", function () {
+				contarDinero.initialize();
+			}, false);
         </script>
     </body>
 </html>
