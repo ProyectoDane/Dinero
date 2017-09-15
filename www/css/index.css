@@ -97,6 +97,28 @@ body {
 	left: 3%;
 	right: 92%;
 }
+.v-btn-off{
+	background : url(../img/btn/v-btn-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.v-btn-on{
+	background : url(../img/btn/v-btn-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.v-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	right: 3%;
+	left: 86%;
+}
+.v-btn-pos-home{
+	top: 91%;
+	bottom: 1%;
+	right: 3%;
+	left: 82%;
+}
 .b-btn-on{
 	background : url(../img/btn/b-btn-on.png);
 	background-size: 100% 100%;
@@ -824,19 +846,25 @@ div.dialog-txt{
 .bill-banner img{
 	border: solid 1px grey !important;
 }
+/* SALVETTI CAMBIOS inicio */
 #cb-2pe,#cb-5pe,#cb-10pe{
-	top: 24%;
-	bottom:57.5%;
+	top: 8%;
+	bottom:80%;
 }
 #cb-20pe,#cb-50pe,#cb-100pe{
-	top: 56.5%;
-	bottom:22.5%;
+	top: 34.5%;
+	bottom:60%;
 }
-#cb-2pe,#cb-20pe{
+#cb-200pe,#cb-500pe{
+	top: 60.5%;
+	bottom:40%;
+}
+
+#cb-2pe,#cb-20pe,#cb-200pe{
 	left: 3%;
 	right: 68%;
 }
-#cb-5pe,#cb-50pe{
+#cb-5pe,#cb-50pe,#cb-500pe{
 	left: 31%;
 	right: 38%;
 }
@@ -844,12 +872,7 @@ div.dialog-txt{
 	left: 59%;
 	right: 7%;
 }
-#cb-500pe {
-  left: 88%;
-  transform: rotate(90deg);
-  top: 24%;
-  transform-origin: 19% 50%;
-}
+
 .bill-grande{
 	position: absolute;
 	height:70% !important;
@@ -1116,8 +1139,29 @@ div.dialog-txt{
 	background : url(../img/bill/100f-gb-evita.png);
 	background-size: 100% 100%;
 }
+/*Conocer los billetes - 200 pesos inicio salvetti*/
+#cb-200pe-front{
+	background : url(../img/bill/200f-g.png);
+	background-size: 100% 100%;
+}
+#cb-200pe-back{
+	background : url(../img/bill/200b-g.png);
+	background-size: 100% 100%;
+}
+#cb-200pe-front-z1{
+	background : url(../img/bill/200f-g.png);
+	background-size: 100% 100%;
+}
+#cb-200pe-front-z2{
+	background : url(../img/bill/200f-g.png);
+	background-size: 100% 100%;
+}
 
-/*Conocer los billetes - 500 pesos */
+
+
+/*Conocer los billetes - 200 pesos final*/
+
+/*Conocer los billetes - 500 pesos antes 500f-g-z1.png y 500f-g-z2.png */
 #cb-500pe-front{
 	background : url(../img/bill/500f-g.png);
 	background-size: 100% 100%;
@@ -1127,11 +1171,11 @@ div.dialog-txt{
 	background-size: 100% 100%;
 }
 #cb-500pe-front-z1{
-	background : url(../img/bill/500f-g-z1.png);
+	background : url(../img/bill/500f-g.png);
 	background-size: 100% 100%;
 }
 #cb-500pe-front-z2{
-	background : url(../img/bill/500f-g-z2.png);
+	background : url(../img/bill/500f-g.png);
 	background-size: 100% 100%;
 }
 
@@ -1935,12 +1979,12 @@ div.dialog-txt{
 #creditos .credits-content p {
 	color: #fff;
 	text-shadow:none;
-	padding-top: 0;
+	padding-top: 8;
 }
-
+/* estaba en 18% */
 #creditos .logos-content {
 	width: 30%;
-	padding: 18% 0 0 30px;
+	padding: 2px 0 0 2px;
 }
 
 #creditos .logos-content img {

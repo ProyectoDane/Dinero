@@ -1,14 +1,28 @@
 {
-  "name": "monedas-y-billetes",
-  "version": "2.2.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "cordova": "^5.4.1"
-  },
-  "devDependencies": {
-    "phonegap": "^6.3.3"
-  },
-  "author": "FDV Solutions",
-  "license": "UNLICENSED"
+    "name": "monedas-y-billetes",
+    "version": "2.2.3",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "cordova": "^5.4.1",
+        "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-app-preferences": "^0.99.3",
+        "cordova-plugin-whitelist": "1"
+    },
+    "devDependencies": {
+        "phonegap": "^6.3.3"
+    },
+    "author": "FDV Solutions",
+    "license": "UNLICENSED",
+    "cordova": {
+        "platforms": [
+            "android",
+            "ios"
+        ],
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-app-preferences": {}
+        }
+    }
 }

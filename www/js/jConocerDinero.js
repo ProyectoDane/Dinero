@@ -55,13 +55,13 @@ var indexCD = {
 	        // );
 	        // sound.play();
 
-  			window.setTimeout(function(){
-  				var url = audios.intro.vamos_a_conocerlos;
-				conocerDinero.soundsManager.playSound(url);
-  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1], animationElemPair, "", 10000 );
-  				// Dialogo 1 - tama�o de fuente.
-				fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );
-  			},playTimeLast);
+  		//	window.setTimeout(function(){
+  		//		var url = audios.intro.vamos_a_conocerlos;
+		//		conocerDinero.soundsManager.playSound(url);
+  		//		playTimeLast = dialogManager.startDialog( [dialog0], [dialog1], animationElemPair, "", 10000 );
+  		//		// Dialogo 1 - tama�o de fuente.
+		//		fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );
+  		//	},playTimeLast);
 
   		});//Espera un segundo para empezar a hablar.
 
@@ -243,7 +243,7 @@ var dosPesosCM = {
 		var playTimeLast;
 		self.suspenderClickHandlers = true;
 		window.setTimeout(function(){
-  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 6000 /*por ahora*/ );
+  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 12000 /*por ahora*/ );
   			// Dialogo 0 - tama�o de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
@@ -464,7 +464,7 @@ var ctvs50M = {
 		var playTimeLast;
 		self.suspenderClickHandlers = true;
 		window.setTimeout(function(){
-  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 6000 /*por ahora*/ );
+  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 10000 /*por ahora*/ );
   			// Dialogo 0 - tama�o de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
@@ -486,12 +486,12 @@ var ctvs50M = {
 	  //       sound.play();
 
   			window.setTimeout(function(){
-  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1,monBack], animationElemPair, "", 4000/*por ahora*/ );
+  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1,monBack], animationElemPair, "", 7000/*por ahora*/ );
   				// Dialogo 1 - tama�o de fuente.
 				fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );
 
   				window.setTimeout(function(){
-  					playTimeLast = dialogManager.startDialog( [dialog1,monBack], [dialog2,monFront], animationElemPair, "", 4000/*por ahora*/ );
+  					playTimeLast = dialogManager.startDialog( [dialog1,monBack], [dialog2,monFront], animationElemPair, "", 7000/*por ahora*/ );
   					// Dialogo 2 - tama�o de fuente.
 					fillSpanWithCorrectFontSize( $(dialog2).find(".dialog-txt"), null, null, "black" );
 
@@ -566,7 +566,7 @@ var ctvs25M = {
 		var playTimeLast;
 		self.suspenderClickHandlers = true;
 		window.setTimeout(function(){
-  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 4000 /*por ahora*/ );
+  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 12000 /*por ahora*/ );
   			// Dialogo 0 - tama�o de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
@@ -588,7 +588,7 @@ var ctvs25M = {
 	  //       sound.play();
 
   			window.setTimeout(function(){
-  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1,monBack], animationElemPair, "", 4000/*por ahora*/ );
+  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1,monBack], animationElemPair, "", 7000/*por ahora*/ );
   				// Dialogo 1 - tama�o de fuente.
 				fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );
 
@@ -665,7 +665,7 @@ var ctvs10M = {
 		var playTimeLast;
 		self.suspenderClickHandlers = true;
 		window.setTimeout(function(){
-  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 5000 /*por ahora*/ );
+  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 11000 /*por ahora*/ );
   			// Dialogo 0 - tama�o de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
@@ -673,7 +673,7 @@ var ctvs10M = {
 			conocerDinero.soundsManager.playSound(url);
 
   			window.setTimeout(function(){
-  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1,monBack], animationElemPair, "", 4000/*por ahora*/ );
+  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1,monBack], animationElemPair, "", 7000/*por ahora*/ );
   				// Dialogo 1 - tama�o de fuente.
 				fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );
 
@@ -750,7 +750,7 @@ var ctvs5M = {
 		var playTimeLast;
 		self.suspenderClickHandlers = true;
 		window.setTimeout(function(){
-  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 5000 /*por ahora*/ );
+  			playTimeLast = dialogManager.startDialog( [],[dialog0], animationElemPair, "", 12000 /*por ahora*/ );
   			// Dialogo 0 - tama�o de fuente.
 			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
 
@@ -772,7 +772,7 @@ var ctvs5M = {
 	  //       sound.play();
 
   			window.setTimeout(function(){
-  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1,monBack], animationElemPair, "", 4000/*por ahora*/ );
+  				playTimeLast = dialogManager.startDialog( [dialog0], [dialog1,monBack], animationElemPair, "", 9000/*por ahora*/ );
   				// Dialogo 1 - tama�o de fuente.
 				fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );
 
@@ -1588,6 +1588,108 @@ var cienPesosCB = {
 	},
 };
 
+/* inicio salvetti 200 pesos */
+
+var doscientosPesosCB = {
+
+	suspenderClickHandlers :false,
+
+	init: function(){
+		if (sound != undefined) {
+			sound.stop();
+		}
+		$("#cb-200pe-dialog-0").hide();
+		$("#cb-200pe-dialog-1").hide();
+		$("#cb-200pe-dialog-2").hide();
+		$("#cb-200pe-dialog-3").hide();
+		$("#cb-200pe-front").show();
+		$("#cb-200pe-back").hide();
+		$("#cb-200pe-front-z1").hide();
+		$("#cb-200pe-front-z2").hide();
+		$("#cb-200pe-vaca-1").show();
+		$("#cb-200pe-vaca-2").hide();
+		//$(".btn").hide();
+
+	},
+
+	start: function(){
+
+		var dialog0 = document.getElementById("cb-200pe-dialog-0");
+		var dialog1 = document.getElementById("cb-200pe-dialog-1");
+		var dialog2 = document.getElementById("cb-200pe-dialog-2");
+		var dialog3 = document.getElementById("cb-200pe-dialog-3");
+		var billFront = document.getElementById("cb-200pe-front");
+		var billBack = document.getElementById("cb-200pe-back");
+		var billZoomN = document.getElementById("cb-200pe-front-z1");
+		var billZoomL = document.getElementById("cb-200pe-front-z2");
+		var vacaPos1 = document.getElementById("cb-200pe-vaca-1");
+		var vacaPos2 = document.getElementById("cb-200pe-vaca-2");
+
+		var animationElemPair = [vacaPos1, vacaPos2];
+
+		var playTimeLast;
+		self.suspenderClickHandlers = true;
+		window.setTimeout(function(){
+  			playTimeLast = dialogManager.startDialog( [],[billFront, dialog0], animationElemPair, "", 8000 /*por ahora*/ );
+  			// Dialogo 0 - tama�o de fuente.
+			fillSpanWithCorrectFontSize( $(dialog0).find(".dialog-txt"), null, null, "black" );
+
+			var url = audios.billetes.billete_200pesos;
+			conocerDinero.soundsManager.playSound(url);
+
+  			window.setTimeout(function(){
+  				playTimeLast = dialogManager.startDialog( [dialog0, billFront],[dialog1, billZoomN], animationElemPair, "", 6000 /*por ahora*/ );
+	  			// Dialogo 1 - tama�o de fuente.
+				fillSpanWithCorrectFontSize( $(dialog1).find(".dialog-txt"), null, null, "black" );
+
+	  			window.setTimeout(function(){
+	  				playTimeLast = dialogManager.startDialog( [dialog1, billZoomN],[dialog2, billZoomL], animationElemPair, "", 3000 /*por ahora*/ );
+	  				// Dialogo 2 - tama�o de fuente.
+					fillSpanWithCorrectFontSize( $(dialog2).find(".dialog-txt"), null, null, "black" );
+
+	  					window.setTimeout(function(){
+	  						playTimeLast = dialogManager.startDialog( [dialog2, billZoomL],[dialog3, billBack], animationElemPair, "", 6000 /*por ahora*/ );
+	  						// Dialogo 3 - tama�o de fuente.
+							fillSpanWithCorrectFontSize( $(dialog3).find(".dialog-txt"), null, null, "black" );
+
+	  						window.setTimeout(function(){
+  								self.suspenderClickHandlers = false;
+  								$(".btn").show();
+  							},playTimeLast);
+
+	  					},playTimeLast);
+
+	  			},playTimeLast);
+
+  			},playTimeLast);
+
+  		});//Espera 1 segundo para empezar a hablar.
+
+	},
+
+	//Todos los Bindings de eventos que se hacen una vez en la p�gina.
+	setUp: function(){
+		/*Al tocar el billete, da vuelta - CARA*/
+		$("#cb-200pe-front").on("click",function(){
+  			if(!self.suspenderClickHandlers){
+	  			$(this).hide();
+	  			$("#cb-200pe-dialog-0").hide();
+	  			$("#cb-200pe-back").show();
+	  			$("#cb-200pe-dialog-3").show();
+  			};
+		});
+		/*Al tocar el billete, da vuelta - CONTRACARA*/
+		$("#cb-200pe-back").on("click",function(){
+  			if(!self.suspenderClickHandlers){
+	  			$(this).hide();
+	  			$("#cb-200pe-dialog-3").hide();
+	  			$("#cb-200pe-front").show();
+	  			$("#cb-200pe-dialog-0").show();
+  			};
+		});
+	},
+};
+/* final salvetti 200 pesos */
 var quinientosPesosCB = {
 
 	suspenderClickHandlers :false,
@@ -1708,13 +1810,14 @@ var conocerDinero = {
 		"conocer-b-20pe" : veintePesosCB,
 		"conocer-b-50pe" : cincuentaPesosCB,
 		"conocer-b-100pe" : cienPesosCB,
+		"conocer-b-200pe" : doscientosPesosCB,
 		"conocer-b-500pe" : quinientosPesosCB
 	},
 
 	initialize: function(){
 		this.soundsManager = new SoundsManager();
 		this.setUpGamePages();
-
+		audio.initialize(this.soundsManager);
 	},
 
 	setUpGamePages: function(){

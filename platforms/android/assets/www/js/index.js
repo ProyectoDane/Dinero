@@ -106,10 +106,13 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        this.soundsManager = new SoundsManager();
+        audio.initialize(this.soundsManager);
+
         document.addEventListener("backbutton", onBackKeyDown, true);
         document.addEventListener("menubutton", menuKeyDown, true);
         var url = "audio/intro-primer-pantalla.mp3";
-        var src = "";
+        /*var src = "";
         // Android needs the search path explicitly specified
         if (cordova.platformId === 'android') {
             src = '/android_asset/www/' + url;
@@ -126,10 +129,18 @@ var app = {
             }
         );
         bienvenida.play();
+
+        document.addEventListener("pause", function() {
+            bienvenida.stop();
+            bienvenida.release();
+        });
+
+        var soundButton = document.getElementById("v-btn-cd");
+        soundButton.addEventListener("touchend", this.changeAudioState, false);*/
+
+        this.soundsManager.playSound(url);
     }
 };
-
-
 
 var nivelSuperadoManager = {
 
