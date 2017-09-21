@@ -1958,7 +1958,7 @@ var cincuentaPesosCB = {
 		$("#cb-50pe-dialog-2").hide();
 		$("#cb-50pe-dialog-3").hide();
 		$("#cb-50pe-dialog-4").hide();
-		$("#cb-50pe-front").hide();
+		$("#cb-50pe-front").show();
 		$("#cb-50pe-back").hide();
 		$("#cb-50pe-front-z1").hide();
 		$("#cb-50pe-front-z2").hide();
@@ -2224,7 +2224,7 @@ var cienPesosCB = {
 		$("#cb-100pe-dialog-2").hide();
 		$("#cb-100pe-dialog-3").hide();
 		$("#cb-100pe-dialog-4").hide();
-		$("#cb-100pe-front").hide();
+		$("#cb-100pe-front").show();
 		$("#cb-100pe-back").hide();
 		$("#cb-100pe-front-z1").hide();
 		$("#cb-100pe-front-z2").hide();
