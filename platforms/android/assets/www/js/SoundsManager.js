@@ -3,6 +3,7 @@
 function SoundsManager() {
 	this.currentSound = null;
 	this.sounds = new Array();
+	this.enabled = true;
 }
 
 SoundsManager.prototype.constructor = SoundsManager;
@@ -33,6 +34,43 @@ SoundsManager.prototype.playSound = function(name, important) {
 
 	this.currentSound = soundObj;
 	var sound = null;
+
+	if (this.enabled == false) {
+		this.stopSound();
+	}
+
+	document.addEventListener("pause", function() {
+        soundObj.instance.stop();
+        soundObj.instance.release();
+        soundObj.isPlaying = false;
+    });
+}
+
+SoundsManager.prototype.playLast = function() {
+	if (this.currentSound.isPlaying == false) {
+		this.currentSound.instance.play();
+		this.currentSound.isPlaying = true;
+	}
+}
+
+SoundsManager.prototype.stopSound = function() {
+	try {
+		this.currentSound.instance.stop();
+		this.currentSound.instance.release();
+		this.currentSound.isPlaying = false;
+	} catch(error) {
+		console.log("can't stop the sound");
+	}
+}
+
+SoundsManager.prototype.setEnabled = function(value) {
+	this.enabled = value;
+
+	if (this.enabled == false) {
+		this.stopSound();
+	} else {
+		this.playLast();
+	}
 }
 
 SoundsManager.prototype.onSuccessMedia = function() {

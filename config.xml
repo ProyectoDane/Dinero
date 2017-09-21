@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.monedasybilletes" version="2.2.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.monedasybilletes" version="2.2.4" versionCode="3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Monedas y Billetes</name>
     <description>
         Aprendiendo sobre el dinero.
@@ -25,6 +25,7 @@
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="all" />
     <preference name="android-installLocation" value="internalOnly" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
@@ -56,7 +57,6 @@
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
-    <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -65,10 +65,17 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon density="ldpi" src="res/mipmap-ldpi/icon.png" />
+        <icon density="mdpi" src="res/mipmap-mdpi/icon.png" />
+        <icon density="hdpi" src="res/mipmap-hdpi/icon.png" />
+        <icon density="xhdpi" src="res/mipmap-xhdpi/icon.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <engine name="android" spec="~6.0.0" />
+    <engine name="android" spec="^6.2.3" />
+    <engine name="ios" spec="^4.4.0" />
+    <plugin name="cordova-plugin-app-preferences" spec="^0.99.3" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
 </widget>

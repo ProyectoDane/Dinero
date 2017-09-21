@@ -20,6 +20,7 @@
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
         <script type="text/javascript" src="../js/login.js"></script>
         <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/audioManager.js"></script>
         <script type="text/javascript" src="../js/jCompraExacta.js"></script>   
         <script type="text/javascript" src="../js/SoundsManager.js"></script>      
         
@@ -36,12 +37,13 @@
                      -->
 	    			<img id="ce-vaca-bolso-img" src="../img/ce-intro-vaca-bolso.png" />
 	    			<div id="ce-index-dialog-0" class="dialog dialog-small-up">
-		    			<div id="ce-index-dialog-0-txt" class="dialog-txt">
+		    			<div id="ce-index-dialog-0-txt" class="dialog-txt" style="color: black;">
 	                        <span class="dialog-intext">TOCA SOBRE EL <strong>KIOSCO</strong> PARA EMPEZAR A COMPRAR</span>
 	                    </div>
                    </div>
                    <div class="kiosco"></div>                   
                    <a id="m-btn-ce-i" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                   <a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
                    <a id="hm-btn-ce-i" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
             	</div>
     		</div>    		
@@ -123,7 +125,8 @@
     				<a id="5-b1" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
     				<div id="5-b1-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-b1" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
-    				<div id="6-b1-off" class="btn six-btn-off six-btn-pos off"></div>    				
+    				<div id="6-b1-off" class="btn six-btn-off six-btn-pos off"></div>  
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a>  				
     				<a id="hm-btn-ce-b1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
             	</div>
     		</div>    		
@@ -174,7 +177,8 @@
     				<a id="5-b2" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
     				<div id="5-b2-off" class="btn five-btn-off five-btn-pos off"></div>
     				<a id="6-b2" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
-    				<div id="6-b2-off" class="btn six-btn-off six-btn-pos off"></div>    				
+    				<div id="6-b2-off" class="btn six-btn-off six-btn-pos off"></div>    
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a>				
     				<a id="hm-btn-ce-b1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
             	</div>
     		</div>    		
@@ -225,7 +229,8 @@
 					<a id="5-b3" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
 					<div id="5-b3-off" class="btn five-btn-off five-btn-pos off"></div>
 					<a id="6-b3" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
-					<div id="6-b3-off" class="btn six-btn-off six-btn-pos off"></div>    				
+					<div id="6-b3-off" class="btn six-btn-off six-btn-pos off"></div>   
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a> 				
 					<a id="hm-btn-ce-b3" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
             	</div>
     		</div>    		
@@ -316,7 +321,8 @@
 					<a id="5-b4" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
 					<div id="5-b4-off" class="btn five-btn-off five-btn-pos off"></div>
 					<a id="6-b4" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
-					<div id="6-b4-off" class="btn six-btn-off six-btn-pos off"></div>    				
+					<div id="6-b4-off" class="btn six-btn-off six-btn-pos off"></div>   
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a> 				
 					<a id="hm-btn-ce-b4" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>    		
@@ -407,7 +413,8 @@
 					<div id="4-b5-off" class="btn four-btn-off four-btn-pos off"></div>
 					<a id="5-b5" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
 					<a id="6-b5" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
-					<div id="6-b5-off" class="btn six-btn-off six-btn-pos off"></div>    				
+					<div id="6-b5-off" class="btn six-btn-off six-btn-pos off"></div>  
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a>  				
 					<a id="hm-btn-ce-b5" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>    		
@@ -498,6 +505,7 @@
 					<a id="5-b6" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
 					<div id="5-b6-off" class="btn five-btn-on five-btn-pos off"></div>
 					<a id="6-b6" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a>
 					<a id="hm-btn-ce-b5" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>    		
@@ -511,8 +519,11 @@
         <!-- Calculadora: fin -->
     	
        	<script type="text/javascript">
+            document.addEventListener("deviceready", function () {
+                compraExacta.initialize();
+            }, false);
             //app.loadApp();
-            compraExacta.initialize();
+            //compraExacta.initialize();
         </script>
     </body>
 </html>

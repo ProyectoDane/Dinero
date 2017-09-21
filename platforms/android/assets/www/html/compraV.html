@@ -20,8 +20,9 @@
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
         <script type="text/javascript" src="../js/login.js"></script>
         <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/audioManager.js"></script>
         <script type="text/javascript" src="../js/jCompraVuelto.js"></script> 
-        <script type="text/javascript" src="../js/SoundsManager.js"></script>
+        <script type="text/javascript" src="../js/SoundsManager.js"></script>        
 
         <title>Aprendiendo sobre el dinero - COMPRA CON VUELTO</title>
     </head>
@@ -36,12 +37,13 @@
                      -->
 	    			<img id="cv-vaca-bolso-img" src="../img/ce-intro-vaca-bolso.png" />
 	    			<div id="cv-index-dialog-0" class="dialog dialog-small-up">
-		    			<div id="cv-index-dialog-0-txt" class="dialog-txt">
+		    			<div id="cv-index-dialog-0-txt" class="dialog-txt" style="color: black;">
 	                        <span class="dialog-intext">TOCA SOBRE EL <strong>KIOSCO</strong> PARA EMPEZAR A COMPRAR</span>
 	                    </div>
                    </div>
                    <div class="kiosco"></div>                   
                    <a id="m-btn-cv-i" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                   <a id="v-btn-cd" class="btn v-btn-on v-btn-pos" rel="external"></a>
                    <a id="hm-btn-cv-i" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
             	</div>
     		</div>    		
@@ -64,10 +66,10 @@
 		<div id="c1-compra-v" data-role="page" >
 			<div data-role="content" class="fullscreen">
     			<div id="cv-c1-bg-container" class="page-background">
-<!--
+<!-- 
 	    			<img id="cv-c1-vaca-img-1" class="cv-vaca-img" src="../img/vaca-neutral-pos1.png" />
 	    			<img id="cv-c1-vaca-img-2" class="cv-vaca-img" src="../img/vaca-neutral-pos2.png" />
-                    -->
+                    --> 
 	    			<img class="nivel-actual" src="../img/btn/1-on.png" />
 	    			<div id="cv-c1-dialog-0" class="dialog cv-dialog dialog-small-up">
                         <div id="cv-c1-dialog-0-txt" class="dialog-txt">
@@ -103,6 +105,7 @@
     				<div id="4-c1-off" class="btn four-btn-off four-btn-pos off"></div>
     				<a id="5-c1" class="btn five-btn-on five-btn-pos" href="#c5-compra-v"></a>
     				<div id="5-c1-off" class="btn five-btn-off five-btn-pos off"></div>
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a>
     				<a id="hm-btn-cv-c1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
             	</div>
     		</div>    		
@@ -113,7 +116,7 @@
 		<div id="c2-compra-v" data-role="page" >
 			<div data-role="content" class="fullscreen">
     			<div id="cv-c2-bg-container" class="page-background">
-<!--
+<!-- 
 	    			<img id="cv-c2-vaca-img-1" class="cv-vaca-img" src="../img/vaca-neutral-pos1.png" />
 	    			<img id="cv-c2-vaca-img-2" class="cv-vaca-img" src="../img/vaca-neutral-pos2.png" />
                      -->
@@ -191,6 +194,7 @@
     				<div id="4-c2-off" class="btn four-btn-off four-btn-pos off"></div>
     				<a id="5-c2" class="btn five-btn-on five-btn-pos" href="#c5-compra-v"></a>
     				<div id="5-c2-off" class="btn five-btn-off five-btn-pos off"></div>
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a>
     				<a id="hm-btn-ce-b1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>    				
             	</div>
     		</div>    		
@@ -308,6 +312,7 @@
 					<a id="3-c3" class="btn three-btn-on three-btn-pos" href="#c3-compra-v"></a>
 					<a id="4-c3" class="btn four-btn-on four-btn-pos" href="#c4-compra-v"></a>
 					<div id="4-c3-off" class="btn four-btn-off four-btn-pos off"></div>
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a>
 					<a id="hm-btn-cv-c3" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>    		
@@ -421,15 +426,19 @@
 					<a id="3-c4" class="btn three-btn-on three-btn-pos" href="#c3-compra-v"></a>
 					<div id="3-c4-off" class="btn four-btn-off four-btn-pos off"></div>
 					<a id="4-c4" class="btn four-btn-on four-btn-pos" href="#c4-compra-v"></a>
+                    <a id="v-btn-cd" class="btn hm-btn v-btn-pos" rel="external"></a>
 					<a id="hm-btn-cv-c4" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
 				</div>
     		</div>    		
     	</div>
-    	<!--Nivel 4 - Juego compra vuelto: fin -->
-
+    	<!--Nivel 4 - Juego compra vuelto: fin -->    	
+    	
        	<script type="text/javascript">
             //app.loadApp();
-            compraVuelto.initialize();
+            //compraVuelto.initialize();
+            document.addEventListener("deviceready", function () {
+                compraVuelto.initialize();
+            }, false);
         </script>
     </body>
 </html>
