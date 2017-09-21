@@ -9,6 +9,14 @@ var audio = {
 		}
 	},
 
+	setCallback: function(callback) {
+		this.callback = callback;
+	},
+
+	update: function() {
+		this.prefs.fetch(this.setSound, this.fail, "isSoundDeactivated");
+	},
+
 	changeAudioState: function() {
 		var get = function(value) {
 			var newValue = true;
@@ -37,6 +45,10 @@ var audio = {
 			}
 			audio.soundsManager.setEnabled(true);
     	} 
+
+    	if (audio.callback) {
+			audio.callback(!value);
+		}
     },
 
     ok: function(value) {
