@@ -61,7 +61,7 @@
     <icon density="hdpi" src="res/mipmap-hdpi/icon.png" />
     <icon density="xhdpi" src="res/mipmap-xhdpi/icon.png" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="orientation" value="landscape" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
